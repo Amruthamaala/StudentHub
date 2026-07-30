@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Workspace Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="whatsapp-layout">
+  <div class="chat-header">
+    <button class="back-arrow" onclick="window.location.href='dashboard.html'">⬅ Back</button>
+    <div class="header-details">
+      <h3 id="roomTitle">Project Room</h3>
+      <span id="roomManifest">Verifying roster...</span>
+    </div>
+  </div>
+  <div id="chatStream" class="chat-body"></div>
+  <div class="chat-footer">
+    <input type="text" id="chatTypedInput" placeholder="Type a message..." onkeydown="handleChatEnter(event)">
+    <button onclick="dispatchMessage()">Send</button>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => { initChatRoom(); });
+</script>
+</body>
+</html>
